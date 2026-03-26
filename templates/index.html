@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block headinclude %}
+    <link rel="stylesheet" href="css/index.css">
+{% endblock headinclude %}
+
+{% block content %}
+
+<div class="outer">
+    <div class="middle">
+        <div class="inner">
+            <div class="left">
+                <h1 class="title jetbrains-mono-extrabold noselect">
+                    <span class="title-name">millzy</span><span class="title-extension">.dev</span>
+                </h1>
+                <p class="jetbrains-mono-regular noselect">Software Engineer|Undergraduate</p>
+                <p class="jetbrains-mono-light noselect">C|C++|C#|Java</p>
+            </div>
+            <div class="right jetbrains-mono-bold">
+                <p><a class="menu-highlight noselect" href="{{ get_url(path='@/posts/_index.md') }}">Posts</a></p>
+                <p><a class="menu-highlight noselect" href=""">Projects</a></p>
+                <p><a class="menu-nonhighlight noselect jetbrains-mono-bolditalic" href="https://github.com/MillzyDev">GitHub</a></p>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,73 @@
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    margin-right: 40px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.right {
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.title {
+    vertical-align: top;
+    font-size: 3rem;
+    margin-bottom: auto;
+    margin-top: 0;
+}
+
+.title-name {
+    color: aliceblue;
+}
+
+.title-extension {
+    color: blueviolet;
+}
+
+p, a {
+    color: aliceblue;
+}
+
+.menu-nonhighlight {
+    font-size: 1.2rem;
+    transition: .2s;
+}
+
+.menu-nonhighlight:hover {
+    opacity: 0.5;
+    padding-left: 10px;
+}
+
+.menu-highlight {
+    font-size: 1.5rem;
+    transition: .2s;
+    color: blueviolet;
+}
+
+.menu-highlight:hover {
+    opacity: 0.5;
+    padding-left: 10px;
+}

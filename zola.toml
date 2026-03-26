@@ -1,0 +1,27 @@
+base_url = "https://millzy.dev"
+compile_sass = true
+build_search_index = true
+generate_feeds = true
+exclude_paginated_pages_in_sitemap = "all"
+
+taxonomies = [
+    { name = "tags", feed = true },
+    { name = "series", feed = true }
+]
+
+[markdown]
+bottom_footnotes = true
+github_alerts = true
+
+
+[markdown.highlighting]
+theme = "one-dark-pro"
+style = "class"
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[extra]
+# Put all your custom variables here

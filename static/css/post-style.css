@@ -1,0 +1,255 @@
+.topnav {
+    background-color: rgba(240, 248, 255, 0.025);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin: auto;
+}
+
+.topnav-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.topnav-left p {
+    font-size: 1.3rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.topnav-right p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+p {
+    color: aliceblue;
+}
+
+.title-name {
+    color: aliceblue;
+}
+
+.nav-nonselected {
+    color: aliceblue;
+}
+
+.title-extension, .nav-selected {
+    color: blueviolet;
+}
+
+.hoverable {
+    transition: .2s;
+}
+
+.hoverable:hover {
+    opacity: 0.5;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 800;
+}
+
+.main-content {
+    width: 60vw;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10ch;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.title {
+    text-align: center;
+}
+
+.description {
+    margin: auto;
+    width: 30vw;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.post-list {
+    margin-top: 5ch;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-card {
+    padding: 1ch 2ch 2ch 2ch;
+    background-color: rgba(240, 248, 255, 0.025);
+    margin-bottom: 1rem;
+}
+
+.post-card-description {
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.post-card-time {
+    font-size: 0.9rem;
+}
+
+.post-link {
+    color: aliceblue;
+    transition: .2s;
+}
+
+.post-link:hover {
+    opacity: 0.5;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.paginator-link {
+    display: flex;
+    align-items: center;
+    gap: .5ch;
+    text-decoration: none;
+    color: blueviolet;
+    transition: .2s;
+}
+
+.paginator-link:hover {
+    opacity: 0.5f;
+}
+
+.post-metadata {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-time {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.post-title {
+    text-align: center;
+    margin: 5px;
+}
+
+.post-content {
+    margin: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-color: rgba(240, 248, 255, 0.025);
+}
+
+pre.giallo {
+    font-size: 1rem;
+    padding: 15px;
+    background-color: rgba(40, 23, 57, 0.5);
+}
+
+.giallo-ln {
+    margin-right: 2ch;
+    user-select: none;
+}
+
+table, th, td {
+    padding: 10px;
+    border: 1px solid rgba(240, 248, 255, 0.25);
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgba(40, 23, 57, 0.5);
+}
+
+.alert-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.markdown-alert-note p, .markdown-alert-tip p, .markdown-alert-important p, .markdown-alert-warning p, .markdown-alert-caution p {
+    margin: 0;
+}
+
+.markdown-alert-note {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px turquoise solid;
+    background-color: rgba(64, 224, 208, 0.1);
+}
+
+.markdown-alert-note .alert-heading {
+    color: turquoise;
+}
+
+.markdown-alert-tip {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px limegreen solid;
+    background-color: rgba(50, 205, 50, 0.1);
+}
+
+.markdown-alert-tip .alert-heading {
+    color: limegreen;
+}
+
+.markdown-alert-important {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px mediumpurple solid;
+    background-color: rgba(147, 112, 216, 0.1);
+}
+
+.markdown-alert-important .alert-heading {
+    color: mediumpurple;
+}
+
+
+.markdown-alert-warning {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px goldenrod solid;
+    background-color: rgba(218, 165, 32, 0.1);
+}
+
+.markdown-alert-warning .alert-heading {
+    color: goldenrod;
+}
+
+.markdown-alert-caution {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px firebrick solid;
+    background-color: rgba(178, 34, 34, 0.1);
+}
+
+.markdown-alert-caution .alert-heading {
+    color: firebrick;
+}

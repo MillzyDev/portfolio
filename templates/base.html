@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>millzy.dev</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="/css/style.css">
+        {% block headinclude %} {% endblock headinclude %}
+    </head>
+
+    <body>
+        <section class="section">
+            <div class="container">
+                {% block content %} {% endblock content %}
+            </div>
+        </section>
+    </body>
+</html>

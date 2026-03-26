@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block headinclude %}
+<link rel="stylesheet" href="/css/post-style.css">
+<link id="giallo" rel="stylesheet" type="text/css" href="/giallo.css">
+{% endblock headinclude %}
+
+{% block content %}
+<div class="topnav jetbrains-mono-regular">
+    <div class="topnav-left jetbrains-mono-bold">
+        <p>
+            <span class="title-name">millzy</span><span class="title-extension">.dev</span>
+            /
+            posts
+            /
+            {{ page.slug }}
+        </p>
+    </div>
+    <div class="topnav-right">
+        <p><a class="hoverable nav-nonselected" href="/">Home</a></p>
+        <p><a class="hoverable nav-selected" href="{{ get_url(path='@/posts/_index.md') }}">Posts</a></p>
+        <p><a class="hoverable nav-nonselected" href="https://github.com/MillzyDev">GitHub</a></p>
+    </div>
+</div>
+
+<div class="main-content jetbrains-mono-regular">
+    <h1 class="post-title jetbrains-mono-extrabold">{{ page.title }}</h1>
+    
+    <div class="post-metadata">
+        {% if page.date %}
+            <time class="post-time jetbrains-mono-regular" datetime="{{ page.date }}">{{ page.date | date(format="%d/%m/%Y") }}</time>
+        {% endif %}
+    </div>
+    
+
+    <p class="description">
+        {{ page.description }}
+    </p>
+    
+    <div class="post-content">
+        {{ page.content | safe }}
+    </div>
+</div>
+
+<script src="{{ get_url(path='js/alerts.js') | safe }}"></script>
+
+{% endblock content %}
