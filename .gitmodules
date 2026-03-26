@@ -1,0 +1,6 @@
+[submodule "themes/tanuki"]
+	path = themes/tanuki
+	url = https://github.com/raskell-io/tanuki
+[submodule "themes/cela"]
+	path = themes/cela
+	url = https://github.com/edwardzcn-decade/cela
