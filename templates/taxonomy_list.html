@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block headinclude %}
+<link rel="stylesheet" href="{{ get_url(path='css/style.css')  }}">
+{% endblock headinclude %}
+
+{% block content %}
+<div class="topnav jetbrains-mono-regular">
+    <div class="topnav-left jetbrains-mono-bold">
+        <p class="noselect">
+            <a class="path-link" href="/"><span class="title-name">millzy</span><span class="title-extension">.dev</span></a>
+            /
+            <a class="path-link" href="/{{ taxonomy.slug }}/">{{ taxonomy.slug }}</a>
+            /
+        </p>
+    </div>
+    <div class="topnav-right">
+        <p class="noselect"><a class="hoverable nav-nonselected jetbrains-mono-bold" href="/">Home</a></p>
+        <p class="noselect"><a class="hoverable nav-nonselected jetbrains-mono-bold" href="{{ get_url(path='@/posts/_index.md') }}">Posts</a></p>
+        <p class="noselect"><a class="hoverable nav-nonselected jetbrains-mono-bold" href="https://github.com/MillzyDev">GitHub</a></p>
+    </div>
+</div>
+
+<div class="main-content jetbrains-mono-regular">
+    <h1 class="title jetbrains-mono-extrabold">{{ taxonomy.name | title }}</h1>
+    
+    <div class="taxonomy-list">
+        {% for term in terms %}
+            <a href="{{ term.permalink | safe }}" class="taxonomy-item">
+                <span class="taxonomy-name">{{ term.name | title }}</span>
+                <span class="taxonomy-count">{{ term.pages | length }}</span>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

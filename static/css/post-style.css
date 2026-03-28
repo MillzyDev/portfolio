@@ -24,6 +24,10 @@
     font-size: 1.2rem;
 }
 
+.topnav-right a {
+    text-decoration: none;
+}
+
 p {
     color: aliceblue;
 }
@@ -48,7 +52,6 @@ p {
     opacity: 0.5;
     padding-top: 10px;
     margin-bottom: 0px;
-    font-weight: 800;
 }
 
 .main-content {
@@ -87,14 +90,32 @@ p {
     margin-bottom: 1rem;
 }
 
+.post-card h2 {
+    margin-top: 5px;
+}
+
 .post-card-description {
-    height: 3rem;
+    height: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
+
+    hyphens: auto;
+    word-break: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .post-card-time {
-    font-size: 0.9rem;
+    font-size: 15px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.post-card-metadata {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .post-link {
@@ -162,6 +183,15 @@ pre.giallo {
 .giallo-ln {
     margin-right: 2ch;
     user-select: none;
+}
+
+.z-hl {
+    background-color: rgba(255, 217, 0, 0.25);
+    width: 100%;
+}
+
+.z-hl .giallo-ln {
+    color: rgba(240, 248, 255, 0.5);
 }
 
 table, th, td {
@@ -252,4 +282,74 @@ th {
 
 .markdown-alert-caution .alert-heading {
     color: firebrick;
+}
+
+.path-link {
+    color: aliceblue;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.path-link:hover {
+    opacity: 0.5;
+}
+
+.taxonomy-list, .tags {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.card-tag {
+    font-size: 13px;
+    display: block;
+    background-color: rgba(240, 248, 255, 0.05);
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: aliceblue;
+    text-decoration: none;
+    transition: .2s;
+    text-align: center;
+}
+
+.taxonomy-item, .tag {
+    display: block;
+    background-color: rgba(240, 248, 255, 0.05);
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: aliceblue;
+    text-decoration: none;
+    transition: .2s;
+    text-align: center;
+}
+
+.taxonomy-item:hover {
+    margin: auto;
+    font-size: 1.1em;
+}
+
+.taxonomy-count {
+    opacity: 0.5;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.series-badge {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.series-badge a {
+    color: blueviolet;
+    text-decoration: none;
 }

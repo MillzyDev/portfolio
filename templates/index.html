@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block headinclude %}
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{{ get_url(path='css/index.css')  }}">
+
 {% endblock headinclude %}
 
 {% block content %}
@@ -18,7 +19,7 @@
             </div>
             <div class="right jetbrains-mono-bold">
                 <p><a class="menu-highlight noselect" href="{{ get_url(path='@/posts/_index.md') }}">Posts</a></p>
-                <p><a class="menu-highlight noselect" href=""">Projects</a></p>
+                <!-- <p><a class="menu-highlight noselect" href=""">Projects</a></p> -->
                 <p><a class="menu-nonhighlight noselect jetbrains-mono-bolditalic" href="https://github.com/MillzyDev">GitHub</a></p>
             </div>
         </div>

@@ -2,7 +2,6 @@
 
 {% block headinclude %}
 <link rel="stylesheet" href="{{ get_url(path='css/post-style.css')  }}">
-
 {% endblock headinclude %}
 
 {% block content %}
@@ -11,8 +10,10 @@
         <p class="noselect">
             <a class="path-link" href="/"><span class="title-name">millzy</span><span class="title-extension">.dev</span></a>
             /
-            <a class="path-link" href="/posts">posts</a>
+            <a class="path-link" href="/{{ taxonomy.slug }}/">{{ taxonomy.slug }}</a>
             /
+            <a class="path-link" href="/{{ term.slug }}/">{{ term.slug }}</a>
+            
         </p>
     </div>
     <div class="topnav-right">
@@ -23,13 +24,10 @@
 </div>
 
 <div class="main-content jetbrains-mono-regular">
-    <h1 class="title jetbrains-mono-extrabold">Posts</h1>
-    <p class="description">
-        Documenting the projects I undertake, the things I learn, as well as other ramblings.
-    </p>
+    <h1 class="title jetbrains-mono-extrabold">{{ term.name | title }} Posts</h1>
     
     <div class="post-list">
-        {% set pages = paginator.pages | default(value = section.pages) %}
+        {% set pages = term.pages %}
         {% for page in pages %}
             <article class="post-card">
                 <h2>
@@ -45,9 +43,9 @@
                         <time class="post-card-time jetbrains-mono-thin datetime="{{ page.date }}">{{ page.date | date(format="%d/%m/%Y") }}</time>
                     {% endif %}
 
-                    <div class="tags">
+                    <div class="card-tags">
                         {% for tag in page.taxonomies.tags %}
-                            <a href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}" class="tag">
+                            <a href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}" class="card-tag">
                                 <span class="taxonomy-name">{{ tag }}</span>
                             </a>
                          {% endfor %}
@@ -56,29 +54,5 @@
             </article>
         {% endfor %}
     </div>
-
-    <nav class="pagination" aria-label="Pagination">
-        {% if paginator.previous %}
-            <a href="{{ paginator.previous }}" class="paginator-link paginator-link-prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m15 18-6-6 6-6"/>
-                </svg>
-                Newer
-            </a>
-        {% endif %}
-
-        <span class="pagination-info">
-            Page {{ paginator.current_index }} of {{ paginator.number_pagers }}
-        </span>
-
-        {% if paginator.next %}
-            <a href="{{ paginator.next }}" class="paginator-link paginator-link-prev">
-                Older
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m9 18 6-6-6-6"/>
-                </svg>
-            </a>
-        {% endif %}
-    </nav>
 </div>
 {% endblock content %}

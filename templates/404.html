@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block headinclude %}
-    <link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="{{ get_url(path='css/index.css')  }}">
+
 {% endblock headinclude %}
 
 {% block content %}
