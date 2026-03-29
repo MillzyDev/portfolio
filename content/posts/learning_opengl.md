@@ -1,7 +1,7 @@
 +++
 title = "Learning OpenGL"
 date = 2026-03-29
-description = "First step to doing some rendering. Creating a window, drawing a triangle, writing shaders."
+description = "First step to doing some rendering. Setting up and OpenGL project and creating a window."
 
 [taxonomies]
 tags=["C", "Graphics", "OpenGL"]
