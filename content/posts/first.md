@@ -4,8 +4,8 @@ date = 2026-03-24
 description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
 [taxonomies]
-tags=["test"]
-series=["portfolio"]
+tags=["Test"]
+series=["Portfolio"]
 +++
 
 # Header 1
