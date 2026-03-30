@@ -151,4 +151,4 @@ return 0;
 
 After all that work, running the program presents a window that looks like this.
 
-![Blank black window just programmed.](/images/learning-opengl_20260329_211101.webp)
+![Blank black window just programmed.](/images/learning-opengl_20260329_211101.avif)
