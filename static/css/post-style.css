@@ -178,6 +178,7 @@ pre.giallo {
     font-size: 1rem;
     padding: 15px;
     background-color: rgba(40, 23, 57, 0.5);
+    overflow-x: scroll;
 }
 
 .giallo-ln {
