@@ -102,7 +102,7 @@ glDrawArrays(GL_TRIANGLES, 0, 6);
 
 It was tempting to create a second array of vertices for this excercise, however we can keep the same array and just use referencing to properly set the start and size when buffering the data. 
 
-I think we also need to bind the correct vertex array before loaidng the points into the buffer. So immediately after creating our new VBO and VAO, with all the others, we need to first bind the appropriate VAO before loading all the points into the VBO. Finally, since the binding changes, we need to configure the vertex attributes for each VBO and VAO as well.
+I think we also need to bind the correct vertex array before loading the points into the buffer. So immediately after creating our new VBO and VAO, with all the others, we need to first bind the appropriate VAO before loading all the points into the VBO. Finally, since the binding changes, we need to configure the vertex attributes for each VBO and VAO as well.
 ```c,linenos,linenostart=125
 glBindVertexArray(vertexArrayObject1);
 glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject1);
