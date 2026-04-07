@@ -354,3 +354,7 @@ th {
     color: blueviolet;
     text-decoration: none;
 }
+
+hr {
+    background-color: aliceblue;
+}
