@@ -1,6 +1,6 @@
 +++
 title = "Textures"
-date = 2026-04-04
+date = 2026-04-07
 description = "Texture coordinates and learning how to display a texture on a surface."
 
 [taxonomies]
